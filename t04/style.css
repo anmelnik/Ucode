@@ -1,0 +1,17 @@
+.japan {
+	width: 400px;
+	height: 250px;
+	position: relative;
+    border: 2px solid #a7a4a4; 
+}
+
+.japan::before {
+    content: "";
+    width: 150px;
+    height: 150px;
+    margin-left: 125px;
+    margin-top: 50px;
+    position: absolute;
+    background: #ad2332;
+    border-radius: 50%;
+}
