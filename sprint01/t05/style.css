@@ -1,3 +1,41 @@
 img {
     width: 100px;
 }
+
+.conteiner {
+    display: flex;
+    float: left;
+    flex-wrap: wrap;
+}
+
+.captain_america {
+    background: linear-gradient(to bottom, rgb(69, 104, 220) 0%,rgb(176, 106, 179));
+    border: 1px solid #000000;
+    margin: 30px;
+    width: 400px;
+    float: left;
+}
+
+.iron_man {
+    background: linear-gradient(to bottom, rgb(229, 45, 39) 0%,rgb(179, 18, 23));;
+    border: 1px solid #000000;
+    margin: 30px;
+    width: 400px;
+    float: left;
+}
+
+.black_widow {
+    background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(97, 4, 95));;
+    border: 1px solid #000000;
+    margin: 30px;
+    width: 400px;
+    float: left;
+}
+
+.spider_man {
+    background: linear-gradient(to bottom, rgb(229, 45, 39) 0%,rgb(0, 0, 0));;
+    border: 1px solid #000000;
+    margin: 30px;
+    width: 400px;
+    float: left;
+}
