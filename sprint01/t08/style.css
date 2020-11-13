@@ -1,0 +1,44 @@
+table {
+    border: 3px solid rgb(7, 7, 7);
+    background: linear-gradient(to right, rgb(110, 0, 0),antiquewhite);
+    text-align: center;
+    border-collapse: collapse;
+}
+.headeare {
+    color: #ffe369;
+    background-color: rgba(110, 0, 0, 0.4);
+    border: 2px solid rgba(188, 195, 199, 0.05);
+    padding: 10px;
+
+}
+
+th, td {
+    padding: 5px 50px;
+}
+
+tr > td:nth-child(n + 2) {
+    border: 0.1px solid lightgray;
+    background-color: antiquewhite;
+    color: midnightblue;
+}
+
+tr > td.color {
+    background-color: darkred;
+    color: #ffffff;
+}
+
+td:nth-child(1) {
+    color: white;
+}
+
+tr:nth-child(2n + 1) > td:nth-child(1) {
+    background-color: rgba(143,148,251, 0.1);
+}
+
+a {
+    font-weight: bold;
+    color: #ffffff;
+    padding: 10px;
+}
+
+

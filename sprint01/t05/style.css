@@ -1,41 +1,82 @@
 img {
-    width: 100px;
+    height: 182px;
+    position: absolute;
+    transform: scale(0.9);
+    bottom: -10px;
 }
+
+.spider_man > img {
+    top: -10px;
+}
+
 
 .conteiner {
     display: flex;
     float: left;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
 }
 
 .captain_america {
     background: linear-gradient(to bottom, rgb(69, 104, 220) 0%,rgb(176, 106, 179));
     border: 1px solid #000000;
     margin: 30px;
-    width: 400px;
+    width: 270px;
+    height: 140px;
     float: left;
+    position: relative;
+    border-radius: 5px;
 }
 
 .iron_man {
     background: linear-gradient(to bottom, rgb(229, 45, 39) 0%,rgb(179, 18, 23));;
     border: 1px solid #000000;
     margin: 30px;
-    width: 400px;
+    width: 270px;
+    height: 140px;
     float: left;
+    position: relative;
+    border-radius: 5px;
+
 }
 
 .black_widow {
     background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(97, 4, 95));;
     border: 1px solid #000000;
     margin: 30px;
-    width: 400px;
+    width: 270px;
+    height: 140px;
     float: left;
+    position: relative;
+    border-radius: 5px;
 }
 
 .spider_man {
     background: linear-gradient(to bottom, rgb(229, 45, 39) 0%,rgb(0, 0, 0));;
     border: 1px solid #000000;
     margin: 30px;
-    width: 400px;
+    width: 270px;
+    height: 140px;
     float: left;
+    position: relative;
+    border-radius: 5px;
+}
+
+span {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    float: right;
+    position: absolute;
+    right: 10px;
+}
+
+.span-1 {
+    font-weight: bold;
+    font-size: 12px;
+    color: #ffffff;
+    top: 10px;
+}
+
+.span-2 {
+    font-size: 9px;
+    color: rgba(255, 255,255, 0.5);
+    top: 25px;
 }

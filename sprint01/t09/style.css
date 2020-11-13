@@ -1,0 +1,45 @@
+.main {
+    width: auto;
+    height: auto;
+}
+
+.head {
+    margin: 20px;
+}
+
+.first {
+    display: flex;
+}
+
+.second {
+    display: block;
+}
+
+.third {
+    display: flex;
+    align-items: center;
+}
+
+.middle_first {
+    display: flex;
+    align-items: center;
+}
+
+.middle_second {
+    display: flex;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
+#age {
+    width: 45px;
+}
+p {
+    padding: 5px;
+}
+span {
+    margin-left: 5px;
+}
