@@ -1,0 +1,11 @@
+img {
+    width: 500px;
+    float: left;
+    padding-right: 10px;
+}
+
+@media print {
+    img{
+        float: none;
+    }
+}

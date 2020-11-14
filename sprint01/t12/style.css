@@ -1,0 +1,31 @@
+.box {
+    position: relative;
+    margin-right: 200px;
+    padding: 25px;
+    background-color: rgb(212, 212, 212);
+    margin: 100px;
+    font-size: 25px;
+}
+
+.box::before {
+    position: absolute;
+    content: "";
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    top: 0;
+    left: -5%;
+    width: 110%;
+    height: 99%;
+}
+
+.box::after {
+    position: absolute;
+    content: "";
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    left: 0;
+    top: -45%;
+    width: 100%;
+    height: 200%;
+}
+  

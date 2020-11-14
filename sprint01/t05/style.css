@@ -10,7 +10,7 @@ img {
 }
 
 
-.conteiner {
+.container {
     display: flex;
     float: left;
     flex-wrap: wrap; 
@@ -18,7 +18,6 @@ img {
 
 .captain_america {
     background: linear-gradient(to bottom, rgb(69, 104, 220) 0%,rgb(176, 106, 179));
-    border: 1px solid #000000;
     margin: 30px;
     width: 270px;
     height: 140px;
@@ -29,7 +28,6 @@ img {
 
 .iron_man {
     background: linear-gradient(to bottom, rgb(229, 45, 39) 0%,rgb(179, 18, 23));;
-    border: 1px solid #000000;
     margin: 30px;
     width: 270px;
     height: 140px;
@@ -41,7 +39,6 @@ img {
 
 .black_widow {
     background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(97, 4, 95));;
-    border: 1px solid #000000;
     margin: 30px;
     width: 270px;
     height: 140px;
@@ -52,7 +49,6 @@ img {
 
 .spider_man {
     background: linear-gradient(to bottom, rgb(229, 45, 39) 0%,rgb(0, 0, 0));;
-    border: 1px solid #000000;
     margin: 30px;
     width: 270px;
     height: 140px;

@@ -1,0 +1,24 @@
+#hand {
+    width: 300px;
+}
+
+.container {
+    max-width: 800px;
+    height: auto;
+}
+
+.man {
+    height: 100px;
+}
+
+#hand:hover+.container > div:nth-child(2n+1) > img:nth-child(2n+1){
+    visibility: hidden;
+}
+
+#hand:hover+.container > div:nth-child(2n) > img:nth-child(2n){
+    visibility: hidden;
+}
+
+img {
+    margin: 20px;
+}

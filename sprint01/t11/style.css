@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+}
+
+.div-all {
+    margin: 2px;
+}
+
+.data {
+    text-align: center;
+    background-color: rgb(72, 228, 155) ;
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.temp {
+    color: #080808;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.div-all:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+img {
+    transform: scale(0.8);
+}
