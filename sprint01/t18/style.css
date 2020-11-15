@@ -1,0 +1,23 @@
+div {
+	width: 100%;
+	display: flex;
+}
+input {
+	width: 92%;
+	height: 21px;
+	color: green;
+}
+
+input:hover {
+	color: red;
+}
+
+button {
+	width: 7%;
+	height: 2em;
+	color: green;
+}
+
+button:hover {
+	color: red;
+}

@@ -1,0 +1,49 @@
+h2 {
+    text-align: center;
+}
+
+.wramp {
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+    margin: 0 auto;
+}
+
+.div {
+    border: 1px solid lightgrey;
+    width: 400px;
+    height: 120px;
+    padding: 30px;
+    margin: 10px;
+}
+
+.lorem {
+    border: 1px solid #353333;
+    color: blue;
+    width: 390px;
+}
+
+.h1 {
+    border: 1px solid lightgrey;
+    width: 400px;
+    height: 120px;
+    padding: 30px;
+    margin: 10px;
+}
+
+.footer {
+    border: 1px solid lightgrey;
+    width: 400px;
+    height: 120px;
+    padding: 30px;
+    margin: 10px;
+}
+
+.main {
+    border: 1px solid lightgrey;
+    width: 400px;
+    height: 120px;
+    padding: 30px;
+    margin: 10px;
+}
+
