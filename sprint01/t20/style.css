@@ -1,0 +1,28 @@
+/* .content:hover .content__circle {
+    animation-play-state: paused;
+} */
+
+.content__circle {
+    width: 100px;
+    height: 100px;
+    background-color: yellowgreen;
+    border-radius: 50%;
+    position: relative;
+    left: 0;
+    animation-name: green-circle;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes green-circle {
+    0% {
+        left: 0;
+    }
+    50% {
+
+    }
+    100% {
+         left: 100%;
+    }
+}

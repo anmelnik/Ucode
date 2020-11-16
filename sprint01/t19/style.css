@@ -1,0 +1,121 @@
+.content {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.main {
+    text-align: center;
+}
+
+.h1 {
+    color: rgb(236, 113, 133);
+}
+
+.h2 {
+    color: rgb(151, 146, 146);
+    text-align: center;
+}
+
+.b1, .b2, .b3 {
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+    padding: 10px;
+    width: 90%;
+}
+
+.b1 > label, .b2 > label , .b3 > label {
+    border: 1px solid #000000;
+    width: 280px;
+    line-height: 40px;
+    border-radius: 30px;
+}
+
+.b2 {
+    width: 60%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.i1 > input{
+    border: none;
+    border-bottom: 1px solid rgb(80, 72, 72);
+    width: 100%;
+}
+
+.i2 > input{
+    border: none;
+    border-bottom: 1px solid rgb(80, 72, 72);
+    width: 45%;
+}
+
+.i1, .i2 {
+    padding: 10px;
+    width: 90%;
+}
+
+.i2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    outline: none;
+}
+
+.b4 {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.b4 > button{
+    width: 93%; 
+    background: rgb(236, 113, 133);
+    outline: none;
+    border: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.b4 > button:active {
+    background: rgb(150, 36, 55);
+}
+
+.radio:checked + label::after{
+    content: "  \2713";
+    color: rgb(250, 245, 245);
+}
+
+.radio:checked + label {
+    color: rgb(250, 245, 245);
+    background-color: rgb(14, 14, 112);
+}
+
+.radio {
+    display: none;
+}
+
+label {
+    border: 1px solid red;
+}
+
+.b4 > button:hover {
+    background: rgb(120, 122, 122);
+    transition: 1s;
+}
