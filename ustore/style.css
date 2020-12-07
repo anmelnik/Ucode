@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    grid-template-areas: 
+    "header header header header "
+    "ads info info ads2"
+    "ads nav article ads2"
+    " footer footer footer footer ";
+    grid-template-rows: 70px 50px 1fr 80px;
+    grid-template-columns: 20% 15% 1fr 20%;
+    grid-gap: 5px;
+    margin: 0;
+    height: 100vh;
+} 
+
+#ads {
+    grid-area: ads;
+}
+
+/* ----------------- Start Info ----------------- */
+
+#pageInfo {
+    grid-area: info;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    float: left;
+}
+
+.info-content span:first-child {
+    color: rgb(172, 31, 31);
+}
+
+.info-content span:last-child {
+    color: gray;
+}
+
+/* ----------------- End Info ----------------- */
+
+
+
+/* ----------------- Start Header ----------------- */
+
+#pageHeader {
+    grid-area: header;
+    border-bottom: 1px solid lightgray;
+    color: #000000; 
+    line-height: 70px;  
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#pageHeader span {
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#pageHeader img {
+    width: 35px;
+}
+
+/* ----------------- End Header ----------------- */
+
+
+
+/* ----------------- Start Main ----------------- */
+
+#mainArticle {
+    grid-area: article;     
+    border: 1px solid #000000;
+}
+
+.cont img {
+    width: 300px;
+    border-radius: 30px;
+}
+
+.cont {
+    width: 300px;
+    height: 400px;
+}
+
+/* ----------------- End Main ----------------- */
+
+
+
+/* ----------------- Start NavBar ----------------- */
+
+#mainNav {
+    display: flex;
+    flex-direction: column;
+    grid-area: nav; 
+    border: 1px solid #000000;
+}
+
+.contentNav {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    float: left; 
+}
+
+
+/* ----------------- End NavBar ----------------- */
+
+
+
+/* ----------------- Start Footer ----------------- */
+
+#pageFooter {
+    background: #4d0b16;
+    grid-area: footer;
+    color: #ffffff;
+    display: flex;
+    float: left ;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* ----------------- End Footer ----------------- */

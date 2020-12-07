@@ -1,0 +1,26 @@
+[
+    {
+        "category": "Men's shoes",
+        "name": "Black Shodus",
+        "price": "200",
+        "img": "assets/s-2.png"
+    },
+    {
+        "category": "Women's shoes",
+        "name": "Red Shodus",
+        "price": "150",
+        "img": "assets/category_1.jpg"
+    },
+    {
+        "category": "Men's shoes",
+        "name": "Black Shodus",
+        "price": "200",
+        "img": "assets/s-2.png"
+    },
+    {
+        "category": "Women's shoes",
+        "name": "Red Shodus",
+        "price": "150",
+        "img": "assets/category_1.jpg"
+    }
+]
