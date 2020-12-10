@@ -12,11 +12,33 @@
 <body>
 
     <header id="pageHeader">
-        <img src="assets/logo2.png" alt="">
+        <img id="logo" src="assets/logo2.png" alt="">
         <span>HOME</span>
-        <span>SHOP</span>
-        <span>CONTACT</span>
-        <img src="assets/empty_cart.png" alt="">
+        <div class="dropdown">
+        <span class="mainSHOP">SHOP</span>
+        <div class="shopList">
+            <a href="#">All categories</a>
+            <a href="#">Men's shoes</a>
+            <a href="#">Women's shoes</a>
+            <a href="#">Sport shoes</a>
+        </div>
+    </div>
+    <div class="dropdownCont">
+        <span class="contact">CONTACT</span>
+        <div class="contList">
+            <a>+380969694170</a>
+            <a>+380506277065</a>
+            <a>contacts247@shop.com</a>
+        </div>
+    </div>
+    <div class="dropdownCart">
+        <img id="cart" src="assets/empty_cart.png" alt="">
+        <div class="cartList">
+            
+        </div> 
+    </div>
+    </div>
+    </div>
     </header>
 
     <menu id="pageInfo">
@@ -37,21 +59,27 @@
     <div id="ads"></div>
 
     <article id="mainArticle">
+        
     </article>
 
+
     <nav id="mainNav">
+        <ul class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">All Products</a></li>
+        </ul>
         <div class="contentNav">
             <input type="text" name="" id="search" placeholder="Search products...      &#128269;">
-            <span>Price</span>
+            <span id="price">Price:</span>
             <div class="price">
                 <span>From:</span>
-                <input type="text">
+                <input class="inputPrice" type="text">
                 <span>To:</span>
-                <input type="text">
+                <input class="inputPrice" type="text">
                 <input type="range" id="">
             </div>
-            <span>Category</span>
-            <select>
+            <span id="category">Category</span>
+            <select id="categoryList">
                 <option value="All categories">All categories</option>
                 <option value="Men's shoes">Men's shoes</option>
                 <option value="Women's shoes">Women's shoes</option>
@@ -59,7 +87,6 @@
               </select>
         </div>
     </nav>
-
     <div id="ads2"></div>
     <footer id="pageFooter">
         <div>Copyright &copy; 2020 | All rights reserved | Made with &#9825; </div>

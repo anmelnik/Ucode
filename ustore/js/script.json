@@ -3,24 +3,104 @@
         "category": "Men's shoes",
         "name": "Black Shodus",
         "price": "200",
-        "img": "assets/s-2.png"
-    },
-    {
-        "category": "Women's shoes",
-        "name": "Red Shodus",
-        "price": "150",
-        "img": "assets/category_1.jpg"
+        "img": "assets/s-3.png"
     },
     {
         "category": "Men's shoes",
-        "name": "Black Shodus",
+        "name": "Black Shodusa",
         "price": "200",
-        "img": "assets/s-2.png"
+        "img": "assets/s-4.png"
+    },
+    {
+        "category": "Men's shoes",
+        "name": "Black Shodus2",
+        "price": "200",
+        "img": "assets/s1.png"
+    },
+    {
+        "category": "Men's shoes",
+        "name": "Black Shodus3",
+        "price": "200",
+        "img": "assets/s-5.png"
+    },
+    {
+        "category": "Men's shoes",
+        "name": "Black Shodus4",
+        "price": "200",
+        "img": "assets/s-6.png"
+    },
+    {
+        "category": "Men's shoes",
+        "name": "Red Shodus5",
+        "price": "150",
+        "img": "assets/s-7.png"
+    },{
+        "category": "Women's shoes",
+        "name": "Red Shodus6",
+        "price": "150",
+        "img": "assets/s-8.png"
+    },{
+        "category": "Women's shoes",
+        "name": "Red Shodus7",
+        "price": "150",
+        "img": "assets/s-9.png"
+    },{
+        "category": "Women's shoes",
+        "name": "Red Shodus8",
+        "price": "150",
+        "img": "assets/s-10.png"
+    },{
+        "category": "Women's shoes",
+        "name": "Red Shodus10",
+        "price": "150",
+        "img": "assets/s-12.png"
     },
     {
         "category": "Women's shoes",
-        "name": "Red Shodus",
+        "name": "Red Shodus11",
         "price": "150",
-        "img": "assets/category_1.jpg"
+        "img": "assets/s-13.png"
+    },
+    {
+        "category": "Women's shoes",
+        "name": "Red Shodus12",
+        "price": "150",
+        "img": "assets/s-2.png"
+    },
+    {
+        "category": "Sport shoes",
+        "name": "Red Shodus12",
+        "price": "150",
+        "img": "assets/s-23.png"
+    },
+    {
+        "category": "Sport shoes",
+        "name": "Red Shodus12",
+        "price": "150",
+        "img": "assets/s-24.png"
+    },
+    {
+        "category": "Sport shoes",
+        "name": "Red Shodus12",
+        "price": "150",
+        "img": "assets/s-26.png"
+    },
+    {
+        "category": "Sport shoes",
+        "name": "Red Shodus12",
+        "price": "150",
+        "img": "assets/s-27.png"
+    },
+    {
+        "category": "Sport shoes",
+        "name": "Red Shodus12",
+        "price": "150",
+        "img": "assets/s-251.png"
+    },
+    {
+        "category": "Sport shoes",
+        "name": "Red Shodus12",
+        "price": "150",
+        "img": "assets/s-22.png"
     }
 ]
