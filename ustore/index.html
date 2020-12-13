@@ -13,32 +13,39 @@
 
     <header id="pageHeader">
         <img id="logo" src="assets/logo2.png" alt="">
-        <span>HOME</span>
+        <span id="home">HOME</span>
         <div class="dropdown">
-        <span class="mainSHOP">SHOP</span>
-        <div class="shopList">
-            <a href="#">All categories</a>
-            <a href="#">Men's shoes</a>
-            <a href="#">Women's shoes</a>
-            <a href="#">Sport shoes</a>
+            <span class="mainSHOP">SHOP</span>
+            <div class="shopList">
+                <a href="#" data-f="all" class="allCategories">All categories</a>
+                <a href="#" data-f="mens" class="mensShoes">Men's shoes</a>
+                <a href="#" data-f="womens" class="womanShoes">Women's shoes</a>
+                <a href="#" data-f="sports" class="SportShoes">Sport shoes</a>
+            </div>
         </div>
-    </div>
-    <div class="dropdownCont">
-        <span class="contact">CONTACT</span>
-        <div class="contList">
-            <a>+380969694170</a>
-            <a>+380506277065</a>
-            <a>contacts247@shop.com</a>
+        <div class="dropdownCont">
+            <span class="contact">CONTACT</span>
+            <div class="contList">
+                <a>+380969694170</a>
+                <a>+380506277065</a>
+                <a>contacts247@shop.com</a>
+            </div>
         </div>
-    </div>
-    <div class="dropdownCart">
-        <img id="cart" src="assets/empty_cart.png" alt="">
-        <div class="cartList">
-            
-        </div> 
-    </div>
-    </div>
-    </div>
+        <div class="dropdownCart">
+                <div id="easynetshop-cart">
+                    <div id="enscart_my_wrapper">
+                      <div id="enscart_myimage_wrapper">
+                        <img id="cart" src="https://i.ibb.co/ZfJ03Ns/shop1.png">
+                      </div>
+                      <div id="enscart_my_counter_wrapper"><span  id="easynetshop-cart-count">0</span></div>
+                    </div>
+                  </div>
+            <div class="cartList">
+
+            </div>
+        </div>
+        </div>
+        </div>
     </header>
 
     <menu id="pageInfo">
@@ -59,32 +66,28 @@
     <div id="ads"></div>
 
     <article id="mainArticle">
-        
     </article>
 
-
     <nav id="mainNav">
-        <ul class="breadcrumb">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">All Products</a></li>
-        </ul>
         <div class="contentNav">
-            <input type="text" name="" id="search" placeholder="Search products...      &#128269;">
+            <input type="search" id="search" placeholder="Search products...">
+            <button id="searchBtn"> &#128269;</button>
             <span id="price">Price:</span>
             <div class="price">
                 <span>From:</span>
-                <input class="inputPrice" type="text">
+                <input class="inputPrice" id="inputFrom" value="0" type="number" min="0" max="1000">
                 <span>To:</span>
-                <input class="inputPrice" type="text">
-                <input type="range" id="">
+                <input class="inputPrice" id="inputTo" value="1000" type="number" min="0" max="1000">
+                <input type="range" id="inputRange" min="0" max="1000">
+                <button id="applyBtn">APPLY</button>
             </div>
             <span id="category">Category</span>
             <select id="categoryList">
-                <option value="All categories">All categories</option>
-                <option value="Men's shoes">Men's shoes</option>
-                <option value="Women's shoes">Women's shoes</option>
-                <option value="Sport shoes">Sport shoes</option>
-              </select>
+                <option value="all">All categories</option>
+                <option value="mens">Men's shoes</option>
+                <option value="womens">Women's shoes</option>
+                <option value="sports">Sport shoes</option>
+            </select>
         </div>
     </nav>
     <div id="ads2"></div>
@@ -95,21 +98,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

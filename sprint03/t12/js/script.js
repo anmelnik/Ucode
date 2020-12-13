@@ -24,8 +24,9 @@ function clicked() {
     if (text.value === "") {
         alert("Wrong input")
     } else {
-
+        // .name.value
         let cookieValue = escape(document.myForm.name.value)
+        console.log(cookieValue)
         let data = new Date()
         data.setMonth(data.getMonth() + 1)
         notes.value += " --> " + cookieValue + " [" + getFormattedDate(data) + "]" + "\n" 

@@ -65,7 +65,13 @@ body{
     width: 35px;
 }
 
+ #logo{
+    cursor: pointer;
+}
 
+#home{
+    cursor: pointer;
+}
 /* ------------------ */
 
 
@@ -141,15 +147,62 @@ body{
     border: none;
     cursor: pointer;
 }
+#enscart_my_wrapper {
+    text-align: center;
+    top: 8px;
+    right: 20px;
+    z-index: 1140;
+}
+  #enscart_myimage_wrapper {
+    background: #ffffff;
+    border-radius: 30px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.4);
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    z-index: 1140;
+}
+  #enscart_my_wrapper img {
+    height: 80%;
+    width: auto;
+    padding-top: 8px;
+}
+  #enscart_my_counter_wrapper {
+    cursor: pointer;
+    min-width: 30px;
+    height: 30px;
+    background-color: #d62240;
+    color: #fff;
+    border-radius: 30px;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    text-align: center;
+    line-height: 30px;
+    font-family: Arial,sans-serif;
+    margin: 0px 3px;
+    z-index: 1150;
+}
+#easynetshop-cart {
+    border: none;
+    background-color: transparent;
+}
+
 .dropdownCart {
     position: relative;
     display: inline-block;
 }
+
 .cartList {
+    top: 60px;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid #000000;
-    margin-left: -250px;
+    margin-left: -200px;
     position: absolute;
     display: none;
     background: white;
@@ -158,17 +211,9 @@ body{
     overflow: scroll;
 }
 
-
 .dropdownCart:hover .cartList {
     display: block;
     z-index: 1;
-}
-
-.cart-item {
-    display: flex;
-    width: 100%;
-    line-height:40px;
-    border: 1px solid #000000;
 }
 
 .item img {
@@ -213,7 +258,6 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    border: 1px solid #000000;
 }
 
 .cont img {
@@ -338,57 +382,44 @@ body{
     display: flex;
     flex-direction: column;
     float: left; 
-    width: 150%;
+    width: 100%;
     height: 200px;
     border: 2px solid rgb(206, 135, 43);
+}
+
+#searchBtn {
+    width: 100%;
 }
 
 #price {
     margin-top: 30px;
 }
 
-ul.breadcrumb {
-    padding: 10px 0px 20px 0px;
-    list-style: none;
-    background-color: #eee;
-  }
-  ul.breadcrumb li {
-    display: inline;
-    font-size: 18px;
-  }
-  ul.breadcrumb li+li:before {
-    padding: 8px;
-    color: black;
-    content: "/\00a0";
-  }
-  ul.breadcrumb li a {
-    color: #4b4d50;
-    text-decoration: none;
-  }
-  ul.breadcrumb li a:hover {
-    color: #585b5e;
-    text-decoration: underline;
-  }
-
 #search {
     border: 2px solid rgb(194, 128, 29);
     line-height: 20px;
     outline: none;
-    width: 150px;
+    width: 100%;
 }
 
 .inputPrice {
     border: 2px solid rgb(194, 128, 29);
     line-height: 30px;
-    width: 150px;
+    width: 70%;
     outline: none;
+}
+
+#applyBtn {
+    width: 100%;
+    outline: none;
+    border: 2px solid  rgb(194, 128, 29);
 }
 
 input[type=range] {
     height: 39px;
     -webkit-appearance: none;
     margin: 10px 0;
-    width: 150px;
+    width: 100%;
   }
   input[type=range]:focus {
     outline: none;
@@ -428,8 +459,45 @@ input[type=range] {
     border: 2px solid rgb(194, 128, 29);
     line-height: 20px;
     outline: none;
-    width: 180px;
+    width: 110%;
     height: 40px;
+}
+
+.mainSHOP {
+    border: none;
+    cursor: pointer;
+}
+.mainBreadcrumbs {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+.listBreadcrumbs {
+    border-radius: 10px;
+    margin-left: -60px;
+    position: absolute;
+    display: none;
+    background: white;
+    min-width: 170px;
+}
+.listBreadcrumbs a {
+    line-height: 40px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.listBreadcrumbs a:hover {
+    border-radius: 3px;
+    box-shadow: 3px 3px 3px #1a0e0e;
+}
+
+.dropdownBreadcrumbs:hover .listBreadcrumbs {
+    display: block;
+    z-index: 1;
 }
 
 /* ----------------- End NavBar ----------------- */

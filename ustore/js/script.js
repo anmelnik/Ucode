@@ -1,4 +1,5 @@
-
+let counter = 0;
+let count_cart = 0;
 
 fetch("./js/script.json")
     .then((res) => {
@@ -7,24 +8,218 @@ fetch("./js/script.json")
             data.map((elem) => {
                 arr.push(renderItem(elem))
             })
-            renderGoods(arr)
+            renderStartPage(data)
+            addCategoia(data)
+            searcher(data)
+            sortPrice(data)
+            breadcrumbNav(data)
+            init();
         })
     }
     ).catch((err) => {
         console.log(err);
     })
 
+function init() {
+    for (let i = 0; i < localStorage.length; ++i, count_cart++) {
+        let forSplit = String(localStorage.getItem(`${i}`)).split(';');
+        createCartItem({
+            image: forSplit[0],
+            name: forSplit[1],
+            price: forSplit[2]
+        })
+    }
+    document.querySelector('#easynetshop-cart-count').innerHTML = count_cart;
+}
+
+function createCartItem(cart) {
+    for (let i = 0; i < localStorage.length; i++) {
+        if (document.getElementById(`${cart.name}`) !== null) {
+            let children = document.getElementById(`${cart.name}`).children[0].children[3].children[1];
+            children.innerText = +children.innerText + 1;
+            totalPrice(+cart.price)
+            return;
+        }
+    }
+    let cartItem = `<div id="${cart.name}">\
+            <div class="item">\
+            <img src=${cart.image}>\
+            <span>${cart.name}</span>\
+            <span>${cart.price}</span>\
+            <div class="count-items__cart">
+            <button id="btnPlus">+</button>
+            <span id="count">1</span>
+            <button id="btnMinus">-</button>
+            </div>
+            <button id="clear">clear</button>
+            </div></div></div>`
+    createCartItems(cartList, cartItem);
+    totalPrice(+cart.price);
+}
+
+function goToMenPage(data) {
+    document.querySelector("#contMen").addEventListener('click', () => {
+        let arr = []
+        data.map((elem) => {
+            if (elem.category === "mens")
+                arr.push(renderItem(elem))
+        })
+        renderGoods(arr)
+    })
+}
+
+function goToWomenPage(data) {
+    document.querySelector("#contWomen").addEventListener('click', () => {
+        let arr = []
+        data.map((elem) => {
+            if (elem.category === "womens")
+                arr.push(renderItem(elem))
+        })
+        renderGoods(arr)
+    })
+}
+
+function goToSportPage(data) {
+    document.querySelector("#contSport").addEventListener('click', () => {
+        let arr = []
+        data.map((elem) => {
+            if (elem.category === "sports") {
+                arr.push(renderItem(elem))
+            }
+        })
+        renderGoods(arr)
+    })
+}
+
+function sortPrice(data) {
+    let inputFrom = document.querySelector("#inputFrom")
+    let inputTo = document.querySelector("#inputTo")
+    let inputRange = document.querySelector('#inputRange')
+    document.querySelector("#applyBtn").addEventListener('click', () => {
+        let arr = []
+        data.map((elem) => {
+            if (+elem.price >= inputFrom.value && +elem.price <= inputTo.value)
+                arr.push(renderItem(elem))
+        })
+        renderGoods(arr)
+    })
+    inputRange.addEventListener('input', () => {
+        inputTo.value = inputRange.value;
+    })
+}
+
+
+function searcher(data) {
+    let btnSearch = document.querySelector("#searchBtn")
+    btnSearch.addEventListener('click', () => {
+        let search = document.querySelector("#search")
+        let arr = []
+        data.map((elem) => {
+            if (elem.name.toLowerCase().includes(search.value.toLowerCase())) {
+                arr.push(renderItem(elem))
+            }
+        })
+        renderGoods(arr)
+    })
+    let search = document.querySelector("#search")
+    search.addEventListener('search', () => {
+        let arr = []
+        data.map((elem) => {
+            if (elem.name.toLowerCase().includes(search.value.toLowerCase())) {
+                arr.push(renderItem(elem))
+            }
+        })
+        renderGoods(arr)
+    })
+
+}
+
 
 let countItems = 6
 function renderGoods(array) {
     let mainArticle = document.querySelector('#mainArticle')
-    mainArticle.innerHTML = ""
-    for (let i = 0; i < countItems && array[i]; i++) {
-        mainArticle.append(array[i])
-        array[i].children[3].addEventListener('click', addToCart)
+    if (array.length > 0) {
+        mainArticle.innerHTML = ""
+        for (let i = 0; i < countItems && array[i]; i++) {
+            mainArticle.append(array[i])
+            array[i].children[3].addEventListener('click', addToCart)
+        }
+        renderShowBtn(array)
     }
-    renderShowBtn(array)
 }
+
+function addCategoia(data) {
+    document.querySelector(".shopList").addEventListener('click', () => {
+        let arr = []
+        let filterClass = event.target.dataset['f']
+        if (filterClass != "all") {
+            data.map((elem) => {
+                if (elem.category === filterClass) {
+                    arr.push(renderItem(elem))
+                }
+            })
+        } else {
+            data.map((elem) => {
+                arr.push(renderItem(elem))
+            })
+        }
+        renderGoods(arr)
+    })
+    document.querySelector("#categoryList").addEventListener('change', (event) => {
+        let arr = []
+        let filterClass = event.target.value
+        if (filterClass != "all") {
+            data.map((elem) => {
+                if (elem.category === filterClass) {
+                    arr.push(renderItem(elem))
+                }
+            })
+        } else {
+            data.map((elem) => {
+                arr.push(renderItem(elem))
+            })
+        }
+        renderGoods(arr)
+    })
+}
+
+function test(value) {
+    let parent = document.querySelector(".mainBreadcrumbs");
+    let buffer = parent.innerHTML;
+    parent.innerHTML = "HOME / " + value;
+}
+
+function breadcrumbNav(data) {
+    let mainNav = document.querySelector('#mainNav')
+    let breadcrumb = `<div class="dropdownBreadcrumbs">
+            <span class="mainBreadcrumbs">HOME</span>
+            <div class="listBreadcrumbs">
+                <a href="#" data-f="mens" class="mensShoes">Men's shoes</a>
+                <a href="#" data-f="womens" class="womanShoes">Women's shoes</a>
+                <a href="#" data-f="sports" class="SportShoes">Sport shoes</a>
+            </div> 
+            </div>`
+    mainNav.insertAdjacentHTML("afterbegin", breadcrumb)
+    document.querySelector(".mainBreadcrumbs").addEventListener('click', renderStartPage)
+    document.querySelector(".listBreadcrumbs").addEventListener('click', (e) => {
+        let arr = []
+        let filterClass = event.target.dataset['f']
+        if (filterClass != "all") {
+            data.map((elem) => {
+                if (elem.category === filterClass) {
+                    arr.push(renderItem(elem))
+                }
+            })
+        } else {
+            data.map((elem) => {
+                arr.push(renderItem(elem))
+            })
+        }
+        renderGoods(arr)
+        test(e.target.innerHTML);
+    })
+}
+
 
 function renderShowBtn(array) {
     let mainArticle = document.querySelector('#mainArticle')
@@ -36,6 +231,7 @@ function renderShowBtn(array) {
     })
 }
 
+
 let addItem = (e) => {
     let a = e.currentTarget.closest(".count-items__cart").children[1]
     let b = +(a.innerHTML)
@@ -43,6 +239,8 @@ let addItem = (e) => {
     b++;
     a.innerHTML = b
     totalPrice(price)
+    count_cart++;
+    cartCount();
 
 }
 
@@ -54,6 +252,8 @@ let removeItem = (e) => {
         b--;
         a.innerHTML = b
         totalPrice(+price * -1)
+        count_cart--;
+        cartCount();
     }
 }
 
@@ -64,6 +264,9 @@ let clearAllCart = (e) => {
         items[i].remove()
     }
     e.target.closest("div").children[1].innerHTML = "0"
+    localStorage.clear();
+    count_cart = 0;
+    cartCount();
 }
 
 
@@ -73,8 +276,9 @@ let clear = (product) => {
     let price = product.currentTarget.closest(".item").children[2].innerHTML
     let count = product.currentTarget.closest(".item").children[3].children[1].innerHTML
     totalPrice(+price * +count * -1)
-
+    count_cart = count_cart - (+count)
     a.remove()
+    cartCount()
 }
 
 let cartList = document.querySelector(".cartList")
@@ -94,6 +298,10 @@ function totalPrice(price) {
     document.querySelector(".cartOptions").children[1].innerHTML = a
 }
 
+function cartCount() {
+    document.querySelector('#easynetshop-cart-count').innerHTML = count_cart;
+}
+
 function addToCart(e) {
     let cartList = document.querySelector(".cartList")
     let parentImg = e.target.closest('.cont').children[0].getAttribute("src")
@@ -103,35 +311,17 @@ function addToCart(e) {
     btnClear.setAttribute("id", "clear")
     let items = document.querySelectorAll(".item")
     let checkDuplicate = true;
-    let cartItem = `<div id="cart-item">\
-                    <div class="item">\
-                    <img src=${parentImg}>\
-                    <span>${parentOP}</span>\
-                    <span>${parentPrice}</span>\
-                    <div class="count-items__cart">
-                    <button id="btnPlus">+</button>
-                    <span id="count">1</span>
-                    <button id="btnMinus">-</button>
-                    </div>
-                    <button id="clear">clear</button>
-                    </div></div></div>`
-    if (items.length > 0) {
-        for (let i = 0; items[i]; i++) {
-            if (items[i].children[1].innerHTML === parentOP) {
-                checkDuplicate = false;
-                items[i].children[3].children[1].innerHTML++
-                totalPrice(+parentPrice)
-            }
-        }
-        if (checkDuplicate) {
-            createCartItems(cartList, cartItem)
-            totalPrice(+parentPrice)
-        }
-    } else {
-        createCartItems(cartList, cartItem)
-        totalPrice(+parentPrice)
-    }
+    let forStorage = `${parentImg};${parentOP};${parentPrice}`;
+    localStorage.setItem(`${count_cart}`, forStorage);
+    createCartItem({
+        image: parentImg,
+        name: parentOP,
+        price: parentPrice
+    })
+    count_cart++;
+    cartCount();
 }
+
 
 function createCartItems(cartList, cartItem) {
     cartList.insertAdjacentHTML("afterbegin", cartItem)
@@ -165,10 +355,16 @@ function renderItem(elem) {
     return contDiv
 }
 
-document.querySelector('#logo').addEventListener('click', renderStartPage)
+document.querySelector('#home').addEventListener('click', () => {
+    location.reload();
+})
+
+document.querySelector('#logo').addEventListener('click', () => {
+    location.reload();
+})
 
 
-function renderStartPage() {
+function renderStartPage(data) {
     let mainArticle = document.querySelector('#mainArticle')
     let contMain = document.createElement('div')
     let contMen = document.createElement('div')
@@ -186,8 +382,11 @@ function renderStartPage() {
     DescSpanSport.innerText = "Sport shoes"
     contMain.setAttribute("class", "contMain")
     contMen.setAttribute("class", "contIMG")
+    contMen.setAttribute("id", "contMen")
     contWomen.setAttribute("class", "contIMG")
+    contWomen.setAttribute("id", "contWomen")
     contSport.setAttribute("class", "contIMG")
+    contSport.setAttribute("id", "contSport")
     MenImg.setAttribute("src", "assets/category_1.jpg")
     WomenImg.setAttribute("src", "assets/category_2.jpg")
     SportImg.setAttribute("src", "assets/category_3.jpg")
@@ -201,4 +400,7 @@ function renderStartPage() {
     contMain.append(contWomen)
     contMain.append(contSport)
     mainArticle.append(contMain)
+    goToMenPage(data)
+    goToWomenPage(data)
+    goToSportPage(data)
 }
