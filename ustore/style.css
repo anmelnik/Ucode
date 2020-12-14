@@ -21,6 +21,7 @@ body{
     grid-area: ads;
 }
 
+
 /* ----------------- Start Info ----------------- */
 
 #pageInfo {
@@ -72,6 +73,20 @@ body{
 #home{
     cursor: pointer;
 }
+
+.header__burger {
+    display: none;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    width: 900px;
+    justify-content: space-between;
+}
+
+
+
 /* ------------------ */
 
 
@@ -273,7 +288,6 @@ body{
 }
 
 .contMain {
-    
     display: flex;
     flex-wrap: wrap;
     float: left;
@@ -467,12 +481,12 @@ input[type=range] {
     border: none;
     cursor: pointer;
 }
+
 .mainBreadcrumbs {
     position: relative;
     display: inline-block;
     cursor: pointer;
 }
-
 
 .listBreadcrumbs {
     border-radius: 10px;
@@ -482,6 +496,7 @@ input[type=range] {
     background: white;
     min-width: 170px;
 }
+
 .listBreadcrumbs a {
     line-height: 40px;
     color: black;
@@ -499,6 +514,8 @@ input[type=range] {
     display: block;
     z-index: 1;
 }
+
+
 
 /* ----------------- End NavBar ----------------- */
 
@@ -519,3 +536,197 @@ input[type=range] {
 
 
 /* ----------------- End Footer ----------------- */
+
+@media (max-width: 815px) {
+    #pageInfo {
+        display: none;
+    }
+ 
+    #pageHeader {
+     grid-area: header;
+     border-bottom: 1px solid rgb(165, 161, 161);
+     color: #000000; 
+     line-height: 70px;  
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+    }
+ 
+    .header__menu {
+         display: none;
+    }
+
+    body{
+        display: grid;
+        grid-template-areas: 
+        "header header header "
+        "ads info ads2"
+        "ads article ads2"
+        "footer footer footer ";
+        grid-template-rows: 70px 0px 1fr 70px;
+        grid-template-columns: 30% 1fr 30%;
+        grid-gap: 5px;
+        margin: 0;
+        height: 100vh;
+    } 
+
+    #mainArticle {
+        height: 100%;
+    }
+
+    .contMain {
+        display: flex;
+        flex-wrap: wrap;
+        float: left;
+    }
+
+    .contIMG {
+        padding: 0px;
+        width: 320px;
+        height: 320px;
+        float: left;
+        display: block; 
+        position: relative; 
+        z-index: 2;
+    }
+
+    .contIMG span {
+    color: #ffffff;
+    min-width: 125px;
+    left: 80px;
+    min-height: 20px;
+    top: 135px;
+    font-size: 2em;
+    text-align: center;
+    position: absolute;
+    opacity: 0;
+}
+
+.contIMG:hover span {
+    opacity: 1;
+    transition: .5s;
+}
+
+.contIMG::after,
+.contIMG::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    color: #ffffff;
+}
+
+
+.contIMG::after{
+    content:'';
+    transform: scaleX(0);
+}
+.contIMG::before{
+    content:'';
+    transform: scaleY(0);
+}
+
+.contIMG:hover:after{
+    transition: .5s;
+    transform: scaleX(1);
+}
+
+.contIMG:hover:before{
+    transition: .5s;
+    transform: scaleY(1);
+}
+
+
+    #contSport {
+        padding-bottom: 40px;
+    }
+
+    .header__burger {
+        display: block;
+        width: 30px;
+        height: 20px;
+        position: relative;
+    }
+
+    .header__burger::before,
+    .header__burger::after {
+        content: '';
+        background: #000000;
+        position: absolute;
+        width: 100%;
+        height: 3px;  
+        transition: all 0.3s ease 0s;  
+    }
+
+    .header__burger::before {
+        top: 0;
+    }
+    .header__burger span {
+        position: absolute;
+        background: #000000;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header__burger.active span {
+        transform: scale(0);
+    }
+
+    .header__burger::after {
+        bottom: 0;
+    }
+
+    .header__burger.active::before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    .header__burger.active::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    #mainNav {
+        align-items: center;
+        width: 200px;
+        height: 470px;
+        border-radius: 20px;
+        display: none;
+        position: absolute;
+        top: 70px;
+        background: #ffffff;
+        z-index: 50;
+    }
+
+    .dropdownCart {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .cartList {
+        top: 60px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #000000;
+        margin-left: -215px;
+        position: absolute;
+        display: none;
+        background: white;
+        min-width: 330px;
+        height: 200px;
+        overflow: scroll;
+        z-index: 51;
+    }
+    
+    .dropdownCart:hover .cartList {
+        display: block;
+        z-index: 51;
+    }
+}

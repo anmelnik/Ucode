@@ -404,3 +404,16 @@ function renderStartPage(data) {
     goToWomenPage(data)
     goToSportPage(data)
 }
+
+let f = true
+document.querySelector('.header__burger').addEventListener('click', () => {
+    if(f){
+    document.querySelector('#mainNav').style.display = "flex"
+    document.querySelector('.header__burger').setAttribute('class', 'header__burger active')
+    f = false
+    } else {
+        document.querySelector('#mainNav').style.display = "none"
+        document.querySelector('.header__burger').setAttribute('class', 'header__burger')
+        f = true
+    }
+})
