@@ -1,0 +1,24 @@
+.wramp-menu {
+    text-align: center;
+    width: 600px;
+    border: 1px solid #000000;
+    height: 100%;
+    font-style: italic;
+    
+    box-shadow: 1px 4px 5px royalblue;
+}
+
+#title {
+    font-size: 2em;
+}
+
+.a {
+    font-size: 1.5em;
+    
+}
+
+#f {
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+}

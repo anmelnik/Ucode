@@ -1,0 +1,30 @@
+.wramp {
+    width: 650px;
+    text-align: center;
+}
+
+img {
+    width: 500px;
+}
+
+.wramp_conteiner {
+    background: #a32843;
+    border: 1px solid #faf7f7;
+    line-height: 40px;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.wramp_content {
+    height: 60px; 
+    width: 650px; 
+    background: #fcd7df;
+    display: flex;
+}
+
+button {
+    width: 110px;
+    background: #a32843;
+    color: #ffffff;
+    outline: #bb3552;
+}

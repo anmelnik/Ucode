@@ -1,0 +1,98 @@
+h2 {
+    text-align: center;
+}
+
+img {
+    width: 210px;
+}
+
+.img {
+    margin: 10px;
+}
+
+.conteinerBtn {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    width: 180px;
+    margin: 0px 0px 0px 70px;
+}
+
+#btnAll {
+    color: #ffffff;
+    background: #8d9fcf;
+    width: 80px;
+    outline: none;
+    border-radius: 5px;
+    line-height: 20px;
+}
+
+#data {
+    margin: -30px 0px 20px 20px;
+}
+
+#btnFavorite {
+    border-radius: 5px;
+    outline: none;
+    width: 80px;
+    color: #ffffff;
+    background: #4366c5;
+    line-height: 20px;
+}
+
+.description {
+    margin: 30px 20px 20px 20px;
+}
+
+.wramp_conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+}
+
+.wramp_content {
+    display: flex;
+    padding: 10px;
+    width: 1200px;
+
+}
+
+.list {
+    text-align: center;
+    width: 300px;
+}
+
+.main_contentRendar {
+    display: flex;
+    width: 900px;
+}
+
+.actor {
+    display: flex;
+    width: 100%;
+    line-height: 25px;
+    justify-content: space-around;
+}
+
+.nameActor {
+    justify-content: center;
+    text-align: center;
+    width: 75px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    background-color: #667fc5;
+    color: #ffffff;
+    display: flex;
+}
+
+#header {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 20px;
+}
+
+.fa-heart {
+    font-size: 25px;
+    color: red ;
+}
